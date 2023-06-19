@@ -12,7 +12,7 @@ function App() {
   // https://www.freecodecamp.org/news/build-portfolio-website-react/
   // https://www.tutorialspoint.com/reactjs/reactjs_environment_setup.htm
   // https://stackoverflow.com/questions/42318673/changing-the-git-user-inside-visual-studio-code
-  //
+   
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showFab, setShowFab] = useState(false);
