@@ -1,23 +1,36 @@
 import { ReactComponent as MySVG } from "./AvatarAndIcons.svg";
 import { ReactComponent as MySVG2 } from "./github-fill.svg";
-import { ReactComponent as MySVG3 } from "./messenger-fill.svg";
+import { ReactComponent as MySVG3 } from "./linkedin-box-fill.svg";
+
+import { ReactComponent as MySVG4 } from "./html-5-svgrepo-com.svg";
+import { ReactComponent as MySVG5 } from "./tailwind-svgrepo-com.svg";
+import { ReactComponent as MySVG6 } from "./java-svgrepo-com.svg";
+import { ReactComponent as MySVG7 } from "./cplusplus-svgrepo-com.svg";
+import { ReactComponent as MySVG8 } from "./csharp-svgrepo-com.svg";
+import { ReactComponent as MySVG9 } from "./figma-svgrepo-com.svg";
+import { ReactComponent as MySVG10 } from "./hack-the-box-svgrepo-com.svg";
+import { ReactComponent as MySVG11 } from "./art-palette-svgrepo-com.svg";
+import { ReactComponent as MySVG12 } from "./flutter-svgrepo-com.svg";
+
+
+import mainAvatar from "./about_img.jpg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import DrifterStars from '@devil7softwares/react-drifter-stars'
-import { TypeAnimation } from 'react-type-animation';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import DrifterStars from "@devil7softwares/react-drifter-stars";
+import { TypeAnimation } from "react-type-animation";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 function App() {
-
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
   // https://www.freecodecamp.org/news/build-portfolio-website-react/
   // https://www.tutorialspoint.com/reactjs/reactjs_environment_setup.htm
   // https://stackoverflow.com/questions/42318673/changing-the-git-user-inside-visual-studio-code
-   
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showFab, setShowFab] = useState(false);
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,10 +57,10 @@ function App() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [isMenuOpen]);
 
@@ -61,7 +74,7 @@ function App() {
   return (
     <Router>
       <div className="App bg-primaryDark">
-        <div className="absolute top-0 left-0 w-full h-full z-0">
+        <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
           <DrifterStars className="h-full" numStars={1000} speed={0.5} />
         </div>
         <header className="relative">
@@ -99,24 +112,20 @@ function App() {
                 </button>
               </div>
               <ul
-                className={`${isMenuOpen
-                  ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
-                  : "hidden"
-                  } md:flex md:flex-row md:items-center`}
+                className={`${
+                  isMenuOpen
+                    ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
+                    : "hidden"
+                } md:flex md:flex-row md:items-center`}
               >
                 <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#nav" onClick={handleMenuItemClick}>
+                  <a href="#home" onClick={handleMenuItemClick}>
                     Home
                   </a>
                 </li>
                 <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#home" onClick={handleMenuItemClick}>
-                    About
-                  </a>
-                </li>
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
                   <a href="#about" onClick={handleMenuItemClick}>
-                    Service
+                    About
                   </a>
                 </li>
                 <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
@@ -160,22 +169,22 @@ function App() {
             <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
                 <div className="md:w-1/2 md:pr-4 lg:text-left">
-                  <h2 className="text-5xl text-colorAccent font-medium md:text-6xl">
+                  <h2 className="text-5xl text-colorAccent font-medium md:text-5xl">
                     Dexter G. Inguito
                   </h2>
                   <TypeAnimation
                     className="text-md py-5 text-gray dark:text-gray-200 max-w-xl mx-auto md:text-xl"
                     sequence={[
-                      'Android Developer',
+                      "Android Developer",
                       1000,
-                      'Software Developer',
+                      "Software Developer",
                       2000,
-                      () => { },
+                      () => {},
                     ]}
                     wrapper="span"
                     cursor={true}
                     repeat={Infinity}
-                    style={{ fontSize: '2em', display: 'inline-block' }}
+                    style={{ fontSize: "2em", display: "inline-block" }}
                   />
                   <div className="text-md py-5 mx-auto md:text-lg">
                     <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
@@ -186,9 +195,9 @@ function App() {
                   </div>
                   <div className="text-md mx-auto md:text-lg text-left flex items-end justify-center xl:justify-start lg:justify-start">
                     <a href="https://github.com/ddextroo">
-                      <MySVG2 className="w-8 h-8 hover:brightness-125" />
+                      <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=100088807875457">
+                    <a href="https://www.linkedin.com/in/dexter-inguito-b039a827b">
                       <MySVG3 className="w-8 h-8 hover:brightness-125" />
                     </a>
                   </div>
@@ -199,21 +208,121 @@ function App() {
               </div>
             </div>
           </section>
-          {/* about */}
           <section id="about">
+          <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
+            <div className="flex flex-col lg:flex-row items-center text-sm">
+              <div class="p-10 md:w-1/2 md:pl-4">
+                <img
+                  src={mainAvatar}
+                  class="lg:p-20 h-auto max-w-full rounded-full"
+                  alt=""
+                />
+              </div>
+              <div className="md:w-1/2 md:pr-4 lg:text-left">
+                <h2 className="text-5xl text-colorAccent font-medium md:text-5xl">
+                  About me
+                </h2>
+                <h3 className="text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-xl">
+                  I'm Dexter G. Inguito, a self-taught developer passionate
+                  about coding and creativity. My goal is to become a senior
+                  developer, constantly pushing my limits to find innovative
+                  ways to serve others. Alongside coding, I'm studying digital
+                  and multimedia art to enhance my artistic skills. I've
+                  explored various artistic forms like vexel art, vector art,
+                  and landscape art, and even dabbled in creating short films
+                  using multimedia techniques. Although I'm relatively new to
+                  this, my enthusiasm and eagerness to learn keep me going. For
+                  the past three years, I've been freelancing and focusing on
+                  app development. I'm committed to staying up-to-date with
+                  emerging technologies, ensuring that I can adapt to the
+                  ever-changing industry. I've also formed a team and
+                  successfully created a startup app, which has boosted my
+                  experience and fulfillment. Now, I'm ready to expand my
+                  knowledge even further and strive for excellence in my future
+                  projects.
+                </h3>
+              </div>
+            </div>
+          </div>
           </section>
-          {/* service */}
-          <section id="service">
-          </section>
-          {/* skills */}
+          {/* skills */}  
           <section id="skills">
+          <h2 className="pb-10 text-5xl text-colorAccent font-medium md:text-5xl">
+                  Skills
+                </h2>
+            <div className="md:px-10 lg:px-20">
+              <Marquee
+                gradient={true}
+                gradientColor={[70,70,70]}
+                speed={40}
+                pauseOnHover={false}
+                style={{
+                  borderRadius: '10px',
+                }}
+              >
+                <div className="flex flex-wrap justify-center text-primaryLight py-5 font-poppins">
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      HTML
+                    </h2>
+                    <MySVG4 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      JAVA
+                    </h2>
+                    <MySVG6 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      Tailwind CSS
+                    </h2>
+                    <MySVG5 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      C++
+                    </h2>
+                    <MySVG7 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      CSHARP
+                    </h2>
+                    <MySVG8 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      UI/UX DESIGN
+                    </h2>
+                    <MySVG9 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      CYBERSECURITY
+                    </h2>
+                    <MySVG10 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      ART
+                    </h2>
+                    <MySVG11 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                  <div className="flex flex-col items-center px-5">
+                    <h2 className=" text-primaryLight font-medium text-2lg py-5">
+                      FLUTTER
+                    </h2>
+                    <MySVG12 className="w-20 h-20 hover: brightness-125" />
+                  </div>
+                </div>
+              </Marquee>
+            </div>
           </section>
           {/* projects */}
-          <section id="projects">
-          </section>
+          <section id="projects"></section>
           {/* contacts */}
-          <section id="contact" className="about">
-          </section>
+          <section id="contact" className="about"></section>
         </header>
       </div>
     </Router>
@@ -221,6 +330,3 @@ function App() {
 }
 
 export default App;
-
-
-
