@@ -14,6 +14,9 @@ module.exports = {
         'colorAccent': '#5CD2C6',
         'gray': '#DFE3EE',
       },
+      boxShadow: {
+        linkHover: 'inset 100px 0 0 0 #5CD2C6',
+      },
     },
   },
   plugins: [],
