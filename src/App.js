@@ -253,7 +253,7 @@ function App() {
             <div className="md:px-10 sm:px-10 lg:px-20">
               <Marquee
                 gradient={true}
-                gradientColor={[70,70,70]}
+                gradientColor={[100,100,100]}
                 speed={40}
                 pauseOnHover={false}
                 style={{
