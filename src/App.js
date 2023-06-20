@@ -214,7 +214,7 @@ function App() {
               <div class="p-10 md:w-1/2 md:pl-4">
                 <img
                   src={mainAvatar}
-                  class="lg:p-20 h-auto max-w-full rounded-full"
+                  class="lg:p-10 h-auto max-w-full rounded-full xl:p-20"
                   alt=""
                 />
               </div>
