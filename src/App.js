@@ -219,10 +219,10 @@ function App() {
                 />
               </div>
               <div className="md:w-1/2 md:pr-4 lg:text-left">
-                <h2 className="text-5xl text-colorAccent font-medium md:text-5xl">
+                <h2 className="font-poppins text-5xl text-colorAccent font-medium md:text-5xl">
                   About me
                 </h2>
-                <h3 className="text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-xl">
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-xl">
                   I'm Dexter G. Inguito, a self-taught developer passionate
                   about coding and creativity. My goal is to become a senior
                   developer, constantly pushing my limits to find innovative
@@ -247,7 +247,7 @@ function App() {
           </section>
           {/* skills */}  
           <section id="skills">
-          <h2 className="pb-10 text-5xl text-colorAccent font-medium md:text-5xl">
+          <h2 className="font-poppins pb-10 text-5xl text-colorAccent font-medium md:text-5xl">
                   Skills
                 </h2>
             <div className="md:px-10 sm:px-10 lg:px-20">
