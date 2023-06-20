@@ -250,7 +250,7 @@ function App() {
           <h2 className="pb-10 text-5xl text-colorAccent font-medium md:text-5xl">
                   Skills
                 </h2>
-            <div className="md:px-10 lg:px-20">
+            <div className="md:px-10 sm:px-10 lg:px-20">
               <Marquee
                 gradient={true}
                 gradientColor={[70,70,70]}
