@@ -247,8 +247,8 @@ function App() {
           </section>
           {/* skills */}
           <section id="skills">
-            <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
-              Skills
+          <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
+              SKILLS
             </h2>
             <div className="md:px-10 sm:px-10 lg:px-20">
               <Marquee
@@ -840,6 +840,82 @@ function App() {
                   <div className="w-auto px-1 mb-3 md:mb-0">
                     <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
                       SMTP
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Pesoearn
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                Pesoearn is a mobile application that offers users the opportunity to earn rewards while enjoying various audio content such as podcasts, audiobooks, and more. By listening to these audio materials, users can accumulate credits based on the value set by advertisers and sponsors. 
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Moving Market
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                Moving Market is a mobile application designed to make shopping for vegetables and necessary items a convenient and hassle-free experience. With its innovative features, the app allows users to access a map that displays the available markets in their vicinity. Users can explore the map, identify nearby markets, and select the ones that suit their preferences. The app provides a platform for users to browse and purchase a variety of vegetables and other essential items directly from these markets. 
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
                     </h3>
                   </div>
                 </div>
