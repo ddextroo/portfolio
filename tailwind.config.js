@@ -10,9 +10,11 @@ module.exports = {
       },
       colors: {
         'primaryDark': '#363653',
+        'primaryDarkLight': '#52527d',
         'primaryLight': '#FEFEFE',
         'colorAccent': '#5CD2C6',
         'gray': '#DFE3EE',
+        'projectColor': '#4AE290',
       },
       boxShadow: {
         linkHover: 'inset 100px 0 0 0 #5CD2C6',

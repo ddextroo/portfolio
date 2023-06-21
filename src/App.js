@@ -20,6 +20,7 @@ import DrifterStars from "@devil7softwares/react-drifter-stars";
 import { TypeAnimation } from "react-type-animation";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
   // https://www.freecodecamp.org/news/build-portfolio-website-react/
@@ -112,11 +113,10 @@ function App() {
                 </button>
               </div>
               <ul
-                className={`${
-                  isMenuOpen
-                    ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
-                    : "hidden"
-                } md:flex md:flex-row md:items-center`}
+                className={`${isMenuOpen
+                  ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
+                  : "hidden"
+                  } md:flex md:flex-row md:items-center`}
               >
                 <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
                   <a href="#home" onClick={handleMenuItemClick}>
@@ -179,7 +179,7 @@ function App() {
                       1000,
                       "Software Developer",
                       2000,
-                      () => {},
+                      () => { },
                     ]}
                     wrapper="span"
                     cursor={true}
@@ -209,51 +209,51 @@ function App() {
             </div>
           </section>
           <section id="about">
-          <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
-            <div className="flex flex-col lg:flex-row items-center text-sm">
-              <div class="p-10 md:w-1/2 md:pl-4">
-                <img
-                  src={mainAvatar}
-                  class="lg:p-10 h-auto max-w-full rounded-full xl:p-20"
-                  alt=""
-                />
-              </div>
-              <div className="md:w-1/2 md:pr-4 lg:text-left">
-                <h2 className="font-poppins text-5xl text-colorAccent font-medium md:text-5xl">
-                  About me
-                </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-xl">
-                  I'm Dexter G. Inguito, a self-taught developer passionate
-                  about coding and creativity. My goal is to become a senior
-                  developer, constantly pushing my limits to find innovative
-                  ways to serve others. Alongside coding, I'm studying digital
-                  and multimedia art to enhance my artistic skills. I've
-                  explored various artistic forms like vexel art, vector art,
-                  and landscape art, and even dabbled in creating short films
-                  using multimedia techniques. Although I'm relatively new to
-                  this, my enthusiasm and eagerness to learn keep me going. For
-                  the past three years, I've been freelancing and focusing on
-                  app development. I'm committed to staying up-to-date with
-                  emerging technologies, ensuring that I can adapt to the
-                  ever-changing industry. I've also formed a team and
-                  successfully created a startup app, which has boosted my
-                  experience and fulfillment. Now, I'm ready to expand my
-                  knowledge even further and strive for excellence in my future
-                  projects.
-                </h3>
+            <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
+              <div className="flex flex-col lg:flex-row items-center text-sm">
+                <div class="p-10 md:w-1/2 md:pl-4">
+                  <img
+                    src={mainAvatar}
+                    class="lg:p-10 h-auto max-w-full rounded-full xl:p-20"
+                    alt=""
+                  />
+                </div>
+                <div className="md:w-1/2 md:pr-4 lg:text-left">
+                  <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
+                    About me
+                  </h2>
+                  <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-lg">
+                    I'm Dexter G. Inguito, a self-taught developer passionate
+                    about coding and creativity. My goal is to become a senior
+                    developer, constantly pushing my limits to find innovative
+                    ways to serve others. Alongside coding, I'm studying digital
+                    and multimedia art to enhance my artistic skills. I've
+                    explored various artistic forms like vexel art, vector art,
+                    and landscape art, and even dabbled in creating short films
+                    using multimedia techniques. Although I'm relatively new to
+                    this, my enthusiasm and eagerness to learn keep me going. For
+                    the past three years, I've been freelancing and focusing on
+                    app development. I'm committed to staying up-to-date with
+                    emerging technologies, ensuring that I can adapt to the
+                    ever-changing industry. I've also formed a team and
+                    successfully created a startup app, which has boosted my
+                    experience and fulfillment. Now, I'm ready to expand my
+                    knowledge even further and strive for excellence in my future
+                    projects.
+                  </h3>
+                </div>
               </div>
             </div>
-          </div>
           </section>
-          {/* skills */}  
+          {/* skills */}
           <section id="skills">
-          <h2 className="font-poppins pb-10 text-5xl text-colorAccent font-medium md:text-5xl">
-                  Skills
-                </h2>
+            <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
+              Skills
+            </h2>
             <div className="md:px-10 sm:px-10 lg:px-20">
               <Marquee
-                gradient={true}
-                gradientColor={[100,100,100]}
+                gradient={false}
+                gradientColor={[100, 100, 100]}
                 speed={40}
                 pauseOnHover={false}
                 style={{
@@ -287,7 +287,7 @@ function App() {
                   </div>
                   <div className="flex flex-col items-center px-5">
                     <h2 className=" text-primaryLight font-medium text-2lg py-5">
-                      CSHARP
+                      C#
                     </h2>
                     <MySVG8 className="w-20 h-20 hover: brightness-125" />
                   </div>
@@ -311,7 +311,7 @@ function App() {
                   </div>
                   <div className="flex flex-col items-center px-5">
                     <h2 className=" text-primaryLight font-medium text-2lg py-5">
-                      FLUTTER
+                      FLUTTER/DART
                     </h2>
                     <MySVG12 className="w-20 h-20 hover: brightness-125" />
                   </div>
@@ -320,7 +320,544 @@ function App() {
             </div>
           </section>
           {/* projects */}
-          <section id="projects"></section>
+          <section id="projects" className="p-10">
+            <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
+              PROJECTS
+            </h2>
+            <div className="p-10 flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Libratech
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  LibraTech is a modern library management system designed to streamline library operations, improve patron experience, and enhance library engagement.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Desktop
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      SMTP
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  DATM Bank - Bank Management System
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  dATM Bank System is a user-friendly banking system with various features. Authenticated users can perform tasks like checking their account balance, withdrawing and depositing cash, viewing account details, transaction history, changing account number and PIN, transferring money, and signing out.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Console
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      C
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Beart
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Beart is an app that allows artist known by uploading it online and earning money through sales or commission pay.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Iskolar ng Bayan
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Cake Onlineshop
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Crispy King
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  EMenu
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  ZLEC
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  It is a social media platform that give user information, tutorials and awareness about cybersecurity. This app contains categories that represents hacking methods and there's a feed that can post their concerns.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Angels Burger Inventory System
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Commisioned by a student from Surigao State University, It is an automatic inventory system where staff can inventorize their products and materials. It has also an administrator access where managers can see their staffs' records. With this app there is a transparency that minimizes corruption and it helps the stores to be on track with the number of its material and products.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  SSCT Voting System
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Commissioned by a Student from Surigao State University, Its main function is an automated voting system where admistrators can add candidates and their respective positions. After the voting process the mobile application hosted in FireBase will automatically compute the tally of votes gathered during the contactless election.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Online Grading System
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  It is a concept of Automatic Information Management System a.k.a AIMS, It is a platform where professors or the management can add students, do announcements and can post the ratings/grades of students enrolled in their institution.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Roadgrill Order System
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  Projbyte
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                Projbyte is an innovative and dynamic mobile application that serves as a thriving hub for developers and technology students. This powerful platform fosters a vibrant community where users can explore a diverse range of engaging content such as blogs, tutorials, and forums.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Android
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Java
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      Firebase
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                  D3KS Keylogger
+                </h2>
+                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                It is a powerful software application that discreetly records and captures keystrokes entered on a computer system. This specialized keylogger not only logs the keystrokes but also incorporates an SMTP (Simple Mail Transfer Protocol) functionality.
+                </h3>
+                <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                      Desktop
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      C#
+                    </h3>
+                  </div>
+                  <div className="w-auto px-1 mb-3 md:mb-0">
+                    <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                      SMTP
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={mainAvatar}
+                  class="w-auto h-auto rounded-lg object-cover"
+                  alt=""
+                />
+                <div className="text-md py-5 mx-auto md:text-lg text-left">
+                  <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
+                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                      Preview
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
           {/* contacts */}
           <section id="contact" className="about"></section>
         </header>
