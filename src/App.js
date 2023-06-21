@@ -14,12 +14,30 @@ import { ReactComponent as MySVG12 } from "./flutter-svgrepo-com.svg";
 
 
 import mainAvatar from "./about_img.jpg";
+import libratech from "./projects_img/libratech.png";
+import datm from "./projects_img/datm.png";
+import beart from "./projects_img/beart.jpg";
+import iskolar from "./projects_img/iskolar.jpg";
+import cake from "./projects_img/cake.jpg";
+import crispy from "./projects_img/crispyking.jpg";
+import emenu from "./projects_img/emenu.jpg";
+import zlec from "./projects_img/zlec.jpg";
+import burger from "./projects_img/burger.jpg";
+import voting from "./projects_img/voting.jpg";
+import roadgrill from "./projects_img/roadgrill.jpg";
+import onlinegrading from "./projects_img/onlinegrading.jpg";
+import pesoearn from "./projects_img/pesoearn.jpg";
+import movingmarket from "./projects_img/movingmarket.jpg";
+import projbyte from "./projects_img/projbyte.jpg";
+
+
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import DrifterStars from "@devil7softwares/react-drifter-stars";
 import { TypeAnimation } from "react-type-animation";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import { NavLink } from 'react-router-dom';
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -31,6 +49,11 @@ function App() {
   const [showFab, setShowFab] = useState(false);
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  const handleSectionClick2 = (sectionId) => {
+    setActiveSection(sectionId);
+  };
 
 
   const toggleMenu = () => {
@@ -118,28 +141,43 @@ function App() {
                   : "hidden"
                   } md:flex md:flex-row md:items-center`}
               >
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#home" onClick={handleMenuItemClick}>
+                <li
+                  className={`mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === 'home' ? 'bg-colorAccent p-2 rounded-md font-poppins' : ''
+                    }`}
+                >
+                  <a href="#home" onClick={() => handleSectionClick2('home')}>
                     Home
                   </a>
                 </li>
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#about" onClick={handleMenuItemClick}>
+                <li
+                  className={`mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === 'about' ? 'bg-colorAccent p-2 rounded-md font-poppins' : ''
+                    }`}
+                >
+                  <a href="#about" onClick={() => handleSectionClick2('about')}>
                     About
                   </a>
                 </li>
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#skills" onClick={handleMenuItemClick}>
+                <li
+                  className={`mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === 'skills' ? 'bg-colorAccent p-2 rounded-md font-poppins' : ''
+                    }`}
+                >
+                  <a href="#skills" onClick={() => handleSectionClick2('skills')}>
                     Skills
                   </a>
                 </li>
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#projects" onClick={handleMenuItemClick}>
+                <li
+                  className={`mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === 'projects' ? 'bg-colorAccent p-2 rounded-md font-poppins' : ''
+                    }`}
+                >
+                  <a href="#projects" onClick={() => handleSectionClick2('projects')}>
                     Projects
                   </a>
                 </li>
-                <li className="mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto">
-                  <a href="#contact" onClick={handleMenuItemClick}>
+                <li
+                  className={`mr-7 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === 'contact' ? 'bg-colorAccent p-2 rounded-md font-poppins' : ''
+                    }`}
+                >
+                  <a href="#contact" onClick={() => handleSectionClick2('contact')}>
                     Contact
                   </a>
                 </li>
@@ -166,7 +204,7 @@ function App() {
                 )}
               </ul>
             </nav>
-            <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
+            <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
                 <div className="md:w-1/2 md:pr-4 lg:text-left">
                   <h2 className="text-5xl text-colorAccent font-medium md:text-5xl">
@@ -218,7 +256,7 @@ function App() {
                     alt=""
                   />
                 </div>
-                <div className="md:w-1/2 md:pr-4 lg:text-left">
+                <div className="md:basis-1/2 md:pr-4 lg:text-left">
                   <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
                     About me
                   </h2>
@@ -247,7 +285,7 @@ function App() {
           </section>
           {/* skills */}
           <section id="skills">
-          <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
+            <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
               SKILLS
             </h2>
             <div className="md:px-10 sm:px-10 lg:px-20">
@@ -329,7 +367,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Libratech
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   LibraTech is a modern library management system designed to streamline library operations, improve patron experience, and enhance library engagement.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -355,13 +393,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={libratech}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -372,7 +410,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   DATM Bank - Bank Management System
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   dATM Bank System is a user-friendly banking system with various features. Authenticated users can perform tasks like checking their account balance, withdrawing and depositing cash, viewing account details, transaction history, changing account number and PIN, transferring money, and signing out.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -388,13 +426,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={datm}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -405,7 +443,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Beart
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Beart is an app that allows artist known by uploading it online and earning money through sales or commission pay.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -426,13 +464,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
-                  class="w-auto h-auto rounded-lg object-cover"
+                  src={beart}
+                  class="h-auto w-auto rounded-lg object-contain"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -443,7 +481,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Iskolar ng Bayan
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -464,13 +502,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={iskolar}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -481,7 +519,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Cake Onlineshop
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -502,13 +540,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={cake}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -519,7 +557,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Crispy King
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -540,13 +578,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={crispy}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -557,7 +595,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   EMenu
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -578,13 +616,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={emenu}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -595,7 +633,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   ZLEC
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   It is a social media platform that give user information, tutorials and awareness about cybersecurity. This app contains categories that represents hacking methods and there's a feed that can post their concerns.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -616,13 +654,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={zlec}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -633,7 +671,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Angels Burger Inventory System
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Commisioned by a student from Surigao State University, It is an automatic inventory system where staff can inventorize their products and materials. It has also an administrator access where managers can see their staffs' records. With this app there is a transparency that minimizes corruption and it helps the stores to be on track with the number of its material and products.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -654,13 +692,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={burger}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -671,7 +709,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   SSCT Voting System
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Commissioned by a Student from Surigao State University, Its main function is an automated voting system where admistrators can add candidates and their respective positions. After the voting process the mobile application hosted in FireBase will automatically compute the tally of votes gathered during the contactless election.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -692,13 +730,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={voting}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -709,7 +747,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Online Grading System
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   It is a concept of Automatic Information Management System a.k.a AIMS, It is a platform where professors or the management can add students, do announcements and can post the ratings/grades of students enrolled in their institution.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -730,13 +768,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={onlinegrading}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -747,7 +785,7 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Roadgrill Order System
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                   Concept mobile application for contactless doing of order and has an inventory system feature. It is a Digital-Menu where customers can select their desired order and get the total expenses in an instant. It supports in-store purchase and door-to-door delivery purchase.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
@@ -768,13 +806,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={roadgrill}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -785,8 +823,8 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Projbyte
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                Projbyte is an innovative and dynamic mobile application that serves as a thriving hub for developers and technology students. This powerful platform fosters a vibrant community where users can explore a diverse range of engaging content such as blogs, tutorials, and forums.
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Projbyte is an innovative and dynamic mobile application that serves as a thriving hub for developers and technology students. This powerful platform fosters a vibrant community where users can explore a diverse range of engaging content such as blogs, tutorials, and forums.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                   <div className="w-auto px-1 mb-3 md:mb-0">
@@ -806,13 +844,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={projbyte}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -823,8 +861,8 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   D3KS Keylogger
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                It is a powerful software application that discreetly records and captures keystrokes entered on a computer system. This specialized keylogger not only logs the keystrokes but also incorporates an SMTP (Simple Mail Transfer Protocol) functionality.
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                  It is a powerful software application that discreetly records and captures keystrokes entered on a computer system. This specialized keylogger not only logs the keystrokes but also incorporates an SMTP (Simple Mail Transfer Protocol) functionality.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                   <div className="w-auto px-1 mb-3 md:mb-0">
@@ -850,7 +888,7 @@ function App() {
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -861,8 +899,8 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Pesoearn
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                Pesoearn is a mobile application that offers users the opportunity to earn rewards while enjoying various audio content such as podcasts, audiobooks, and more. By listening to these audio materials, users can accumulate credits based on the value set by advertisers and sponsors. 
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Pesoearn is a mobile application that offers users the opportunity to earn rewards while enjoying various audio content such as podcasts, audiobooks, and more. By listening to these audio materials, users can accumulate credits based on the value set by advertisers and sponsors.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                   <div className="w-auto px-1 mb-3 md:mb-0">
@@ -882,13 +920,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={pesoearn}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
@@ -899,8 +937,8 @@ function App() {
                 <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
                   Moving Market
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                Moving Market is a mobile application designed to make shopping for vegetables and necessary items a convenient and hassle-free experience. With its innovative features, the app allows users to access a map that displays the available markets in their vicinity. Users can explore the map, identify nearby markets, and select the ones that suit their preferences. The app provides a platform for users to browse and purchase a variety of vegetables and other essential items directly from these markets. 
+                <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                  Moving Market is a mobile application designed to make shopping for vegetables and necessary items a convenient and hassle-free experience. With its innovative features, the app allows users to access a map that displays the available markets in their vicinity. Users can explore the map, identify nearby markets, and select the ones that suit their preferences. The app provides a platform for users to browse and purchase a variety of vegetables and other essential items directly from these markets.
                 </h3>
                 <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                   <div className="w-auto px-1 mb-3 md:mb-0">
@@ -920,13 +958,13 @@ function App() {
                   </div>
                 </div>
                 <img
-                  src={mainAvatar}
+                  src={movingmarket}
                   class="w-auto h-auto rounded-lg object-cover"
                   alt=""
                 />
                 <div className="text-md py-5 mx-auto md:text-lg text-left">
                   <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                    <button class="font-poppins px-20 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight">
+                    <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
                       Preview
                     </button>
                   </a>
