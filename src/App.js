@@ -44,7 +44,8 @@ import DrifterStars from "@devil7softwares/react-drifter-stars";
 import { TypeAnimation } from "react-type-animation";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import ScrollSpy from "react-scrollspy-navigation";
+import ReactDOM from "react-dom";
+import Scrollspy from 'react-scrollspy'
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -53,11 +54,11 @@ function App() {
   // https://stackoverflow.com/questions/42318673/changing-the-git-user-inside-visual-studio-code
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState();
   const observer = useRef("home");
   const [isSticky, setIsSticky] = useState(false);
   const [showScrollUpBtn, setShowScrollUpBtn] = useState(false);
-  const sections = useRef([]);
+
 
   const handleSectionClick2 = (sectionId) => {
     setActiveSection(sectionId);
@@ -133,7 +134,7 @@ function App() {
         </div>
         <header className="relative">
           <nav
-            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "bg-primaryDark" : ""
+            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "" : ""
               }`}
           >
             <h1 className="text-xl px-8 text-colorAccent font-medium">
@@ -173,62 +174,67 @@ function App() {
                 : "hidden"
                 } md:flex md:flex-row md:items-center`}
             >
-              <li
-                className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "home"
-                  ? "bg-colorAccent p-2 rounded-md font-poppins"
-                  : ""
-                  }`}
-              >
-                <a href="#home" onClick={() => handleSectionClick2("home")}>
-                  Home
-                </a>
-              </li>
-              <li
-                className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "about"
-                  ? "bg-colorAccent p-2 rounded-md font-poppins"
-                  : ""
-                  }`}
-              >
-                <a href="#about" onClick={() => handleSectionClick2("about")}>
-                  About
-                </a>
-              </li>
-              <li
-                className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "skills"
-                  ? "bg-colorAccent p-2 rounded-md font-poppins"
-                  : ""
-                  }`}
-              >
-                <a href="#skills" onClick={() => handleSectionClick2("skills")}>
-                  Skills
-                </a>
-              </li>
-              <li
-                className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "projects"
-                  ? "bg-colorAccent p-2 rounded-md font-poppins"
-                  : ""
-                  }`}
-              >
-                <a
-                  href="#projects"
-                  onClick={() => handleSectionClick2("projects")}
+              <Scrollspy
+                className={`${isMenuOpen
+                  ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
+                  : "hidden"
+                  } scrollspy md:flex md:flex-row md:items-center`} items={['home', 'about', 'skills', 'projects', 'contact']}
+                currentClassName="isCurrent">
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "home"
+                    ? "bg-colorAccent p-2 rounded-md font-poppins"
+                    : ""
+                    }`}
                 >
-                  Projects
-                </a>
-              </li>
-              <li
-                className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "contact"
-                  ? "bg-colorAccent p-2 rounded-md font-poppins"
-                  : ""
-                  }`}
-              >
-                <a
-                  href="#contact"
-                  onClick={() => handleSectionClick2("contact")}
+                  <a href="#home" onClick={toggleMenu}> 
+                    Home
+                  </a>
+                </li>
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "about"
+                    ? "bg-colorAccent p-2 rounded-md font-poppins"
+                    : ""
+                    }`}
                 >
-                  Contact
-                </a>
-              </li>
+                  <a href="#about" onClick={toggleMenu}>
+                    About
+                  </a>
+                </li>
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "skills"
+                    ? "bg-colorAccent p-2 rounded-md font-poppins"
+                    : ""
+                    }`}
+                >
+                  <a href="#skills" onClick={toggleMenu}>
+                    Skills
+                  </a>
+                </li>
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "projects"
+                    ? "bg-colorAccent p-2 rounded-md font-poppins"
+                    : ""
+                    }`}
+                >
+                  <a
+                    href="#projects" onClick={toggleMenu}
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "contact"
+                    ? "bg-colorAccent p-2 rounded-md font-poppins"
+                    : ""
+                    }`}
+                >
+                  <a
+                    href="#contact" onClick={toggleMenu}
+                  >
+                    Contact
+                  </a>
+                </li>
+              </Scrollspy>
 
               {isMenuOpen && (
                 <li className="absolute top-0 right-0 mt-2 mr-4">
