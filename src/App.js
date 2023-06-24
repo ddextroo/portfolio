@@ -134,7 +134,7 @@ function App() {
         </div>
         <header className="relative">
           <nav
-            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "" : ""
+            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "bg-primaryDark" : ""
               }`}
           >
             <h1 className="text-xl px-8 text-colorAccent font-medium">
