@@ -1033,15 +1033,7 @@ function App() {
                     DMusic Player
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    Moving Market is a mobile application designed to make
-                    shopping for vegetables and necessary items a convenient and
-                    hassle-free experience. With its innovative features, the app
-                    allows users to access a map that displays the available
-                    markets in their vicinity. Users can explore the map, identify
-                    nearby markets, and select the ones that suit their
-                    preferences. The app provides a platform for users to browse
-                    and purchase a variety of vegetables and other essential items
-                    directly from these markets.
+                    Java Firebase Console Music Player is a feature-rich app that offers users a seamless music streaming and downloading experience. Developed in Java, the app integrates with Firebase, a popular cloud-based platform, to provide a robust backend infrastructure.
                   </h3>
                   <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                     <div className="w-auto px-1 mb-3 md:mb-0">
@@ -1075,15 +1067,7 @@ function App() {
                     DCalculator
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    Moving Market is a mobile application designed to make
-                    shopping for vegetables and necessary items a convenient and
-                    hassle-free experience. With its innovative features, the app
-                    allows users to access a map that displays the available
-                    markets in their vicinity. Users can explore the map, identify
-                    nearby markets, and select the ones that suit their
-                    preferences. The app provides a platform for users to browse
-                    and purchase a variety of vegetables and other essential items
-                    directly from these markets.
+                    The Simple Calculator with Clean UI is a user-friendly app that provides basic arithmetic functionality in a minimalist and intuitive interface. Designed for simplicity and ease of use, this calculator allows users to perform simple calculations quickly and efficiently.
                   </h3>
                   <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                     <div className="w-auto px-1 mb-3 md:mb-0">
@@ -1117,6 +1101,39 @@ function App() {
                     DConverter
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    The All-in-One Converter app in Java is a comprehensive tool that simplifies conversions in math, geometry, and measurements. It offers users a convenient way to convert values between different units and systems, making calculations and conversions hassle-free.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={dconverter}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    ICT Modules
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
                     Moving Market is a mobile application designed to make
                     shopping for vegetables and necessary items a convenient and
                     hassle-free experience. With its innovative features, the app
@@ -1145,13 +1162,12 @@ function App() {
                     </div>
                   </div>
                   <img
-                    src={dconverter}
+                    src={ictmod}
                     class="w-auto h-auto rounded-lg object-cover"
                     alt=""
                   />
                 </div>
               </div>
-
 
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
@@ -1193,89 +1209,6 @@ function App() {
                       </button>
                     </a>
                   </div>
-                </div>
-              </div>
-
-              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
-                <div className="flex flex-col justify-between">
-                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
-                    DYT Downloader
-                  </h2>
-                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    Moving Market is a mobile application designed to make
-                    shopping for vegetables and necessary items a convenient and
-                    hassle-free experience. With its innovative features, the app
-                    allows users to access a map that displays the available
-                    markets in their vicinity. Users can explore the map, identify
-                    nearby markets, and select the ones that suit their
-                    preferences. The app provides a platform for users to browse
-                    and purchase a variety of vegetables and other essential items
-                    directly from these markets.
-                  </h3>
-                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
-                        Android
-                      </h3>
-                    </div>
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Java
-                      </h3>
-                    </div>
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Firebase
-                      </h3>
-                    </div>
-                  </div>
-                  <img
-                    src={dyt}
-                    class="w-auto h-auto rounded-lg object-cover"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-
-              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
-                <div className="flex flex-col justify-between">
-                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
-                    ICT Modules
-                  </h2>
-                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    Moving Market is a mobile application designed to make
-                    shopping for vegetables and necessary items a convenient and
-                    hassle-free experience. With its innovative features, the app
-                    allows users to access a map that displays the available
-                    markets in their vicinity. Users can explore the map, identify
-                    nearby markets, and select the ones that suit their
-                    preferences. The app provides a platform for users to browse
-                    and purchase a variety of vegetables and other essential items
-                    directly from these markets.
-                  </h3>
-                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
-                        Android
-                      </h3>
-                    </div>
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Java
-                      </h3>
-                    </div>
-                    <div className="w-auto px-1 mb-3 md:mb-0">
-                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Firebase
-                      </h3>
-                    </div>
-                  </div>
-                  <img
-                    src={ictmod}
-                    class="w-auto h-auto rounded-lg object-cover"
-                    alt=""
-                  />
                 </div>
               </div>
             </div>
