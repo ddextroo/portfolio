@@ -30,6 +30,13 @@ import onlinegrading from "./projects_img/onlinegrading.png";
 import pesoearn from "./projects_img/pesoearn.png";
 import movingmarket from "./projects_img/movingmarket.png";
 import projbyte from "./projects_img/projbyte.png";
+import dmusic from "./projects_img/dmusic.png";
+import d3ks from "./projects_img/d3ks.png";
+import dcalculator from "./projects_img/dcalculator.png";
+import dconverter from "./projects_img/dconverter.png";
+import dyoutube from "./projects_img/dyoutube.png";
+import dyt from "./projects_img/dyt.png";
+import ictmod from "./projects_img/ictmod.png";
 
 import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
@@ -497,32 +504,35 @@ function App() {
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
                   <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
-                    Beart
+                    D3KS Keylogger
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    Beart is an app that allows artist known by uploading it
-                    online and earning money through sales or commission pay.
+                    It is a powerful software application that discreetly records
+                    and captures keystrokes entered on a computer system. This
+                    specialized keylogger not only logs the keystrokes but also
+                    incorporates an SMTP (Simple Mail Transfer Protocol)
+                    functionality.
                   </h3>
                   <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
-                        Android
+                        Desktop
                       </h3>
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Java
+                        C#
                       </h3>
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Firebase
+                        SMTP
                       </h3>
                     </div>
                   </div>
                   <img
-                    src={beart}
-                    class="h-auto w-auto rounded-lg object-contain"
+                    src={d3ks}
+                    class="w-auto h-auto rounded-lg object-cover"
                     alt=""
                   />
                 </div>
@@ -531,13 +541,10 @@ function App() {
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
                   <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
-                    Iskolar ng Bayan
+                    DYoutube Downloader
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    An application that hosts compiled, comprehensive, and concise
-                    reviewers for college entrance examinations. It features
-                    groupchats to keep students updated, It has video manuals and
-                    readable modules.
+                    YouTube downloader written in C# with an API is a powerful tool that allows users to download videos from YouTube directly to their devices. It leverages the capabilities of the YouTube API to fetch video metadata and download the corresponding video files.
                   </h3>
                   <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                     <div className="w-auto px-1 mb-3 md:mb-0">
@@ -547,27 +554,20 @@ function App() {
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Java
+                        C#
                       </h3>
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        Firebase
+                        API
                       </h3>
                     </div>
                   </div>
                   <img
-                    src={iskolar}
+                    src={dyoutube}
                     class="w-auto h-auto rounded-lg object-cover"
                     alt=""
                   />
-                  <div className="text-md py-5 mx-auto md:text-lg text-left">
-                    <a href="https://play.google.com/store/apps/details?id=com.ultima.examviewer&hl=en-PH">
-                      <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
-                        Download
-                      </button>
-                    </a>
-                  </div>
                 </div>
               </div>
 
@@ -644,6 +644,7 @@ function App() {
                   />
                 </div>
               </div>
+
 
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
@@ -912,38 +913,36 @@ function App() {
                 </div>
               </div>
 
+
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
                   <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
-                    D3KS Keylogger
+                    Beart
                   </h2>
                   <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
-                    It is a powerful software application that discreetly records
-                    and captures keystrokes entered on a computer system. This
-                    specialized keylogger not only logs the keystrokes but also
-                    incorporates an SMTP (Simple Mail Transfer Protocol)
-                    functionality.
+                    Beart is an app that allows artist known by uploading it
+                    online and earning money through sales or commission pay.
                   </h3>
                   <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
-                        Desktop
+                        Android
                       </h3>
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        C#
+                        Java
                       </h3>
                     </div>
                     <div className="w-auto px-1 mb-3 md:mb-0">
                       <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
-                        SMTP
+                        Firebase
                       </h3>
                     </div>
                   </div>
                   <img
-                    src={mainAvatar}
-                    class="w-auto h-auto rounded-lg object-cover"
+                    src={beart}
+                    class="h-auto w-auto rounded-lg object-contain"
                     alt=""
                   />
                 </div>
@@ -1021,6 +1020,259 @@ function App() {
                   </div>
                   <img
                     src={movingmarket}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    DMusic Player
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    Moving Market is a mobile application designed to make
+                    shopping for vegetables and necessary items a convenient and
+                    hassle-free experience. With its innovative features, the app
+                    allows users to access a map that displays the available
+                    markets in their vicinity. Users can explore the map, identify
+                    nearby markets, and select the ones that suit their
+                    preferences. The app provides a platform for users to browse
+                    and purchase a variety of vegetables and other essential items
+                    directly from these markets.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={dmusic}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    DCalculator
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    Moving Market is a mobile application designed to make
+                    shopping for vegetables and necessary items a convenient and
+                    hassle-free experience. With its innovative features, the app
+                    allows users to access a map that displays the available
+                    markets in their vicinity. Users can explore the map, identify
+                    nearby markets, and select the ones that suit their
+                    preferences. The app provides a platform for users to browse
+                    and purchase a variety of vegetables and other essential items
+                    directly from these markets.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={dcalculator}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    DConverter
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    Moving Market is a mobile application designed to make
+                    shopping for vegetables and necessary items a convenient and
+                    hassle-free experience. With its innovative features, the app
+                    allows users to access a map that displays the available
+                    markets in their vicinity. Users can explore the map, identify
+                    nearby markets, and select the ones that suit their
+                    preferences. The app provides a platform for users to browse
+                    and purchase a variety of vegetables and other essential items
+                    directly from these markets.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={dconverter}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    Iskolar ng Bayan
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    An application that hosts compiled, comprehensive, and concise
+                    reviewers for college entrance examinations. It features
+                    groupchats to keep students updated, It has video manuals and
+                    readable modules.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={iskolar}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                  <div className="text-md py-5 mx-auto md:text-lg text-left">
+                    <a href="https://play.google.com/store/apps/details?id=com.ultima.examviewer&hl=en-PH">
+                      <button class="font-poppins px-5 py-2 bg-primaryDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight xl:px-30 lg:px-20 md:px-10 sm:px-5">
+                        Download
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    DYT Downloader
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    Moving Market is a mobile application designed to make
+                    shopping for vegetables and necessary items a convenient and
+                    hassle-free experience. With its innovative features, the app
+                    allows users to access a map that displays the available
+                    markets in their vicinity. Users can explore the map, identify
+                    nearby markets, and select the ones that suit their
+                    preferences. The app provides a platform for users to browse
+                    and purchase a variety of vegetables and other essential items
+                    directly from these markets.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={dyt}
+                    class="w-auto h-auto rounded-lg object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+
+              <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
+                <div className="flex flex-col justify-between">
+                  <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
+                    ICT Modules
+                  </h2>
+                  <h3 className="font-poppins lg:text-justify md:text-justify py-5 sm:text-left text-gray dark:text-gray-200 mx-auto md:text-md">
+                    Moving Market is a mobile application designed to make
+                    shopping for vegetables and necessary items a convenient and
+                    hassle-free experience. With its innovative features, the app
+                    allows users to access a map that displays the available
+                    markets in their vicinity. Users can explore the map, identify
+                    nearby markets, and select the ones that suit their
+                    preferences. The app provides a platform for users to browse
+                    and purchase a variety of vegetables and other essential items
+                    directly from these markets.
+                  </h3>
+                  <div className="font-poppins text-md mx-auto md:text-lg text-left flex flex-wrap items-end xl:justify-start lg:justify-start m-3">
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppin bg-projectColor hover:bg-primaryDark hover:border-solid hover:border-2 border-gray rounded-md text-justify px-5 text-primaryLight dark:text-gray-200 mx-auto md:text-md">
+                        Android
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Java
+                      </h3>
+                    </div>
+                    <div className="w-auto px-1 mb-3 md:mb-0">
+                      <h3 className="font-poppins bg-primaryDark hover:bg-colorAccent rounded-md text-justify px-5 text-gray dark:text-gray-200 mx-auto md:text-md">
+                        Firebase
+                      </h3>
+                    </div>
+                  </div>
+                  <img
+                    src={ictmod}
                     class="w-auto h-auto rounded-lg object-cover"
                     alt=""
                   />
