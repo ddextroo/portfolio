@@ -163,13 +163,13 @@ function App() {
                 className={`${isMenuOpen
                   ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
                   : "hidden"
-                  } scrollspy md:flex md:flex-row md:items-center`} items={['home', 'about', 'skills', 'projects', 'contact']}
+                  } scrollspy md:flex md:flex-row md:items-center`} items={['home', 'about', 'skills', 'projects']}
                 currentClassName="isCurrent">
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "home"
                     ? "bg-colorAccent p-2 rounded-md font-poppins"
                     : ""
-                    }`}
+                    }`} 
                 >
                   <a href="#home">
                     Home
@@ -234,7 +234,7 @@ function App() {
           {/* <div className="fixed h-45 w-42 bg-purple-700 right-30 bottom-10 text-center leading-45 text-white z-50 text-30 rounded-6 cursor-pointer opacity-0 pointer-events-none transition-all duration-300 ease">
             <i>eds</i>
           </div> */}
-          <section className="min-h-screen font-poppins" id="home">
+          <section className="home min-h-screen font-poppins" id="home">
             <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
                 <div className="md:w-1/2 md:pr-4 lg:text-left">
@@ -280,8 +280,8 @@ function App() {
               </div>
             </div>
           </section>
-          <section id="about">
-            <div className={`p-10 lg:-mt-24 ${isMenuOpen ? "hidden" : ""}`}>
+          <section className="about min-h-screen" id="about">
+            <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
                 <div class="p-10 md:w-1/2 md:pl-4">
                   <img
@@ -318,7 +318,7 @@ function App() {
             </div>
           </section>
           {/* skills */}
-          <section id="skills">
+          <section className="skills" id="skills">
             <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
               SKILLS
             </h2>
@@ -392,7 +392,7 @@ function App() {
             </div>
           </section>
           {/* projects */}
-          <section id="projects" className="p-10">
+          <section id="projects" className="p-10 min-h-screen">
             <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
               PROJECTS
             </h2>
