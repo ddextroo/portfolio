@@ -9,6 +9,12 @@
   html {
     @apply scroll-smooth;
   }
+
+  @font-face {
+    font-family: "Darknet";
+    src: url("darknet.ttf");
+  }
+
 }
 
 body {

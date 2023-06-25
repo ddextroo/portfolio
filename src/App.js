@@ -1,6 +1,7 @@
 import { ReactComponent as MySVG } from "./AvatarAndIcons.svg";
 import { ReactComponent as MySVG2 } from "./github-fill.svg";
 import { ReactComponent as MySVG3 } from "./linkedin-box-fill.svg";
+import { ReactComponent as MySVG33 } from "./mail-fill.svg";
 
 import { ReactComponent as MySVG4 } from "./skills/html-5-svgrepo-com.svg";
 import { ReactComponent as MySVG5 } from "./skills/tailwind-svgrepo-com.svg";
@@ -13,6 +14,8 @@ import { ReactComponent as MySVG11 } from "./skills/art-palette-svgrepo-com.svg"
 import { ReactComponent as MySVG12 } from "./skills/flutter-svgrepo-com.svg";
 
 import { ReactComponent as MySVG13 } from "./arrow-up-s-fill.svg";
+import { ReactComponent as MySVG14 } from "./menu-3-line.svg";
+import { ReactComponent as MySVG15 } from "./close-line.svg";
 
 import mainAvatar from "./about_img.jpg";
 import libratech from "./projects_img/libratech.png";
@@ -134,11 +137,11 @@ function App() {
         </div>
         <header className="relative">
           <nav
-            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "bg-primaryDark" : ""
+            className={`font-poppins py-10 mb-12 flex flex-wrap items-center justify-between sticky top-0 ${isSticky ? "" : ""
               }`}
           >
-            <h1 className="text-xl px-8 text-colorAccent font-medium">
-              <a href="#home" onClick={handleMenuItemClick}>
+            <h1 className="text-xl px-8 text-colorAccent font-darknet">
+              <a href="#home" onClick={handleMenuItemClick} className="font-darknet">
                 DDev
               </a>
             </h1>
@@ -147,31 +150,13 @@ function App() {
                 className="text-primaryLight hover:text-colorAccent focus:outline-none px-10"
                 onClick={toggleMenu}
               >
-                <svg
-                  className="h-6 w-6 fill-current"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {isMenuOpen ? (
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M19 9h-14v-2h14v2zm0 4h-14v2h14v-2zm0 4h-14v2h14v-2z"
-                    />
-                  ) : (
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z"
-                    />
-                  )}
-                </svg>
+                <MySVG14 className="w-5 h-5 hover: brightness-125" />
               </button>
             </div>
             <ul
               className={`${isMenuOpen
                 ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
-                : "hidden"
+                : `${isSticky ? " rounded-l-lg bg-primaryDarkLight pl-3 p-2 " : ""}hidden`
                 } md:flex md:flex-row md:items-center`}
             >
               <Scrollspy
@@ -186,7 +171,7 @@ function App() {
                     : ""
                     }`}
                 >
-                  <a href="#home" onClick={toggleMenu}> 
+                  <a href="#home">
                     Home
                   </a>
                 </li>
@@ -196,7 +181,7 @@ function App() {
                     : ""
                     }`}
                 >
-                  <a href="#about" onClick={toggleMenu}>
+                  <a href="#about" >
                     About
                   </a>
                 </li>
@@ -206,7 +191,7 @@ function App() {
                     : ""
                     }`}
                 >
-                  <a href="#skills" onClick={toggleMenu}>
+                  <a href="#skills" >
                     Skills
                   </a>
                 </li>
@@ -217,21 +202,9 @@ function App() {
                     }`}
                 >
                   <a
-                    href="#projects" onClick={toggleMenu}
+                    href="#projects"
                   >
                     Projects
-                  </a>
-                </li>
-                <li
-                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "contact"
-                    ? "bg-colorAccent p-2 rounded-md font-poppins"
-                    : ""
-                    }`}
-                >
-                  <a
-                    href="#contact" onClick={toggleMenu}
-                  >
-                    Contact
                   </a>
                 </li>
               </Scrollspy>
@@ -242,17 +215,7 @@ function App() {
                     className="text-primaryLight hover:text-colorAccent focus:outline-none p-10"
                     onClick={toggleMenu}
                   >
-                    <svg
-                      className="h-6 w-6 fill-current"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M4 5.414l1.414-1.414L12 10.586l6.586-6.586L20 5.414 13.414 12l6.172 6.586L20 18.586l-6.586-6.172L6.414 19H4v-2.414l6.586-6.172L4 5.414z"
-                      />
-                    </svg>
+                    <MySVG15 className="w-5 h-5 hover: brightness-125" />
                   </button>
                 </li>
               )}
@@ -294,7 +257,7 @@ function App() {
                   />
                   <div className="text-md py-5 mx-auto md:text-lg">
                     <a href="https://drive.google.com/file/d/1lkAr5cA7sEX_HNTCLiS5WWNddzqk6Sb-/preview">
-                      <button class="px-20 py-2 bg-green-200 rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryDark hover:text-primaryLight">
+                      <button class="px-20 py-2 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
                         Open CV
                       </button>
                     </a>
@@ -304,7 +267,10 @@ function App() {
                       <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />
                     </a>
                     <a href="https://www.linkedin.com/in/dexter-inguito-b039a827b">
-                      <MySVG3 className="w-8 h-8 hover:brightness-125" />
+                      <MySVG3 className="mr-2 w-8 h-8 hover:brightness-125" />
+                    </a>
+                    <a href="mailto:dexteringuito@gmail.com?subject = Feedback&body = Message">
+                      <MySVG33 className="w-8 h-8 hover:brightness-125" />
                     </a>
                   </div>
                 </div>
@@ -1219,11 +1185,9 @@ function App() {
               </div>
             </div>
           </section>
-          {/* contacts */}
-          <section id="contact" className="contact"></section>
         </header>
       </div>
-    </Router>
+    </Router >
   );
 }
 
