@@ -234,7 +234,7 @@ function App() {
           {/* <div className="fixed h-45 w-42 bg-purple-700 right-30 bottom-10 text-center leading-45 text-white z-50 text-30 rounded-6 cursor-pointer opacity-0 pointer-events-none transition-all duration-300 ease">
             <i>eds</i>
           </div> */}
-          <section className="home font-poppins" id="home">
+          <section className="home min-h-screen font-poppins" id="home">
             <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
                 <div className="md:w-1/2 md:pr-4 lg:text-left">
