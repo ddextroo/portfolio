@@ -47,8 +47,9 @@ import DrifterStars from "@devil7softwares/react-drifter-stars";
 import { TypeAnimation } from "react-type-animation";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import ReactDOM from "react-dom";
 import Scrollspy from 'react-scrollspy'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -86,6 +87,8 @@ function App() {
   };
 
   useEffect(() => {
+    AOS.init();
+
     const handleResize = () => {
       if (window.innerWidth >= 768 && isMenuOpen) {
         setIsMenuOpen(false);
@@ -142,7 +145,7 @@ function App() {
           >
             <h1 className="text-xl px-8 text-colorAccent font-darknet">
               <a href="#home" onClick={handleMenuItemClick} className="font-darknet">
-                DDev
+                &lt;/DDev&gt;
               </a>
             </h1>
             <div className="md:hidden">
@@ -169,7 +172,7 @@ function App() {
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${activeSection === "home"
                     ? "bg-colorAccent p-2 rounded-md font-poppins"
                     : ""
-                    }`} 
+                    }`}
                 >
                   <a href="#home">
                     Home
@@ -237,7 +240,7 @@ function App() {
           <section className="home min-h-screen font-poppins" id="home">
             <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
-                <div className="md:w-1/2 md:pr-4 lg:text-left">
+                <div className="md:w-1/2 md:pr-4 lg:text-left" data-aos="fade-right">
                   <h2 className="text-5xl text-colorAccent font-medium md:text-5xl">
                     Dexter G. Inguito
                   </h2>
@@ -274,7 +277,7 @@ function App() {
                     </a>
                   </div>
                 </div>
-                <div className="md:w-1/2 md:pl-4">
+                <div className="md:w-1/2 md:pl-4" data-aos="fade-left">
                   <MySVG className="w-full h-auto" />
                 </div>
               </div>
@@ -283,14 +286,14 @@ function App() {
           <section className="about min-h-screen" id="about">
             <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
               <div className="flex flex-col lg:flex-row items-center text-sm">
-                <div class="p-10 md:w-1/2 md:pl-4">
+                <div class="p-10 md:w-1/2 md:pl-4" data-aos="zoom-in">
                   <img
                     src={mainAvatar}
                     class="lg:p-10 h-auto max-w-full rounded-full xl:p-20"
                     alt=""
                   />
                 </div>
-                <div className="md:basis-1/2 md:pr-4 lg:text-left">
+                <div className="md:basis-1/2 md:pr-4 lg:text-left" data-aos="zoom-in-left">
                   <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
                     About me
                   </h2>
@@ -318,7 +321,7 @@ function App() {
             </div>
           </section>
           {/* skills */}
-          <section className="skills" id="skills">
+          <section className="skills" id="skills" data-aos="fade-right">
             <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
               SKILLS
             </h2>
@@ -396,7 +399,7 @@ function App() {
             <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
               PROJECTS
             </h2>
-            <div className="p-10 flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+            <div className="p-10 flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap " data-aos="zoom-in-up">
               <div className="basis-1/3 flex-1 bg-primaryDarkLight rounded-xl shadow-md p-10">
                 <div className="flex flex-col justify-between">
                   <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-left">
