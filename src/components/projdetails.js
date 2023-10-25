@@ -5,7 +5,7 @@ const Projdetails = ({ ProjDetails }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div class="item">
-      <div className="h-96 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10 hover:bg-colorAccent/30">
+      <div className="h-96 lg:w-96 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10 hover:bg-colorAccent/30">
         <div className="max-w-screen-md flex flex-col justify-between">
           <h2 className="font-poppins text-2xl text-primaryLight font-medium md:text-1xl text-center mb-5 md:text-center">
             {name}

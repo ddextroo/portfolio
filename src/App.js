@@ -12,8 +12,8 @@ import { ReactComponent as MySVG9 } from "./skills/figma-svgrepo-com.svg";
 import { ReactComponent as MySVG10 } from "./skills/hack-the-box-svgrepo-com.svg";
 import { ReactComponent as MySVG11 } from "./skills/art-palette-svgrepo-com.svg";
 import { ReactComponent as MySVG12 } from "./skills/flutter-svgrepo-com.svg";
-import vid from "./skills/vid.mp4";
 import audio from "./skills/audio.mp3";
+import vid from "./skills/vid.mp4";
 import Projs from "./components/projs";
   
 import { ReactComponent as MySVG13 } from "./arrow-up-s-fill.svg";
@@ -303,7 +303,7 @@ function App() {
                 />
                 <div className="text-md py-5 mx-auto md:text-lg">
                   <a href="#contact" className="contact">
-                    <button class="px-20 py-2 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
+                   <button class="px-20 py-2 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
                       Let's talk
                     </button>
                   </a>
@@ -339,7 +339,7 @@ function App() {
                     ref={videoRef}
                   >
                     <source src={vid} type="video/mp4" />
-                    Your browser does not support the video tag.
+                  Your browser does not support the audio tag.
                   </video>
                 <div
                   className="flex-row lg:w-2/3 items-center"
