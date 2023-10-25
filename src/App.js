@@ -22,7 +22,6 @@ import { ReactComponent as MySVG15 } from "./close-line.svg";
 import {
   Input,
   Textarea,
-  Button,
 } from "@material-tailwind/react";
 
 import mainAvatar from "./about_img.jpg";
@@ -46,6 +45,9 @@ function App() {
   const [activeSection, setActiveSection] = useState();
   const [isSticky, setIsSticky] = useState(false);
   const [showScrollUpBtn, setShowScrollUpBtn] = useState(false);
+
+  const videoRef = useRef(null);
+
 
   const items = [
     {
@@ -103,6 +105,24 @@ function App() {
       });
     }
   };
+  useEffect(() => {
+    let options = {
+      rootMargin: "0px",
+      threshold: [0.25, 0.75]
+    };
+    let handlePlay = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          videoRef.current.play();
+        } else {
+          videoRef.current.pause();
+        }
+      });
+    };
+    let observer = new IntersectionObserver(handlePlay, options);
+
+    observer.observe(videoRef.current);
+  });
 
   useEffect(() => {
     AOS.init();
@@ -189,6 +209,7 @@ function App() {
                         : ""
                     }hidden`
               } md:flex md:flex-row md:items-center`}
+              onClick={handleMenuItemClick}
             >
               <Scrollspy
                 className={`${
@@ -196,7 +217,7 @@ function App() {
                     ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
                     : "hidden"
                 } scrollspy md:flex md:flex-row md:items-center`}
-                items={["home", "about", "projects"]}
+                items={["home", "about", "projects", "contact"]}
                 currentClassName="isCurrent"
               >
                 <li
@@ -206,7 +227,7 @@ function App() {
                       : ""
                   }`}
                 >
-                  <a href="#home">Home</a>
+                  <a href="#home" onClick={handleMenuItemClick}>Home</a>
                 </li>
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
@@ -214,8 +235,9 @@ function App() {
                       ? "bg-colorAccent p-2 rounded-md font-poppins"
                       : ""
                   }`}
+                  
                 >
-                  <a href="#about">About</a>
+                  <a href="#about" onClick={handleMenuItemClick}>About</a>
                 </li>
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
@@ -223,8 +245,9 @@ function App() {
                       ? "bg-colorAccent p-2 rounded-md font-poppins"
                       : ""
                   }`}
+                  
                 >
-                  <a href="#projects">Projects</a>
+                  <a href="#projects" onClick={handleMenuItemClick}>Projects</a>
                 </li>
               </Scrollspy>
 
@@ -285,7 +308,7 @@ function App() {
                     </button>
                   </a>
                 </div>
-                <audio className="w-full mt-5" autoPlay controls>
+                <audio className="w-full mt-5" controls>
                   <source src={audio} type="audio/mp3" />
                   Your browser does not support the audio tag.
                 </audio>
@@ -311,9 +334,9 @@ function App() {
                   ))}
                 </div>
                 <video
-                    className="w-full flex justify-center items-center"
-                    autoPlay
-                    controls
+                    className="video__player w-full lg:max-w-5xl flex justify-center items-center rounded-lg"
+                    loop
+                    ref={videoRef}
                   >
                     <source src={vid} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -395,7 +418,7 @@ function App() {
         <section className="contact min-h-fit" id="contact">
           <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
             <div className="flex flex-col lg:flex-row justify-center items-center text-sm">
-              <div class="m-5 md:w-1/2 rounded-md" data-aos="zoom-in">
+              <div class="m-5 md:basis-1/2 rounded-md" data-aos="zoom-in">
                 <iframe
                   style={{
                     height: "400px",
@@ -407,7 +430,7 @@ function App() {
                 ></iframe>
               </div>
               <div
-                className="md:basis-1/2 m-2 md:pr-4 lg:text-left font-poppins lg:mt-5"
+                className="md:w-1/2 m-2 md:pr-4 lg:text-left font-poppins lg:mt-5"
                 data-aos="zoom-in-left"
               >
                 <form className="backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10">
