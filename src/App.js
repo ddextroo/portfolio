@@ -336,6 +336,7 @@ function App() {
                 <video
                     className="video__player w-full lg:max-w-5xl flex justify-center items-center rounded-lg"
                     loop
+                    controls
                     ref={videoRef}
                   >
                     <source src={vid} type="video/mp4" />

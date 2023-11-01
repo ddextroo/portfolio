@@ -20,10 +20,12 @@ import dconverter from "../projects_img/dconverter.png";
 import dyoutube from "../projects_img/dyoutube.png";
 import dyt from "../projects_img/dyt.png";
 import ictmod from "../projects_img/ictmod.png";
+import digipa from "../projects_img/digipa.png";
 
 import Projdetails from "./projdetails";
 
 import OwlCarousel from "react-owl-carousel";
+import React, { useState } from "react";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
@@ -211,7 +213,7 @@ const Projs = () => {
       description:
         "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
       tech: ["Android", "Java", "Firebase", "Python"],
-      img: iskolar,
+      img: digipa,
     },
     {
       name: "Kemitoon",
@@ -228,12 +230,17 @@ const Projs = () => {
       img: iskolar,
     },
   ];
+
+  
+
   return (
-    <OwlCarousel className="owl-carousel owl-theme" {...options}>
-      {projects.map((projectDetails, index) => (
-        <Projdetails ProjDetails={projectDetails} key={index} />
-      ))}
-    </OwlCarousel>
+    <div>
+      <OwlCarousel className="owl-carousel owl-theme" {...options}>
+        {projects.map((projectDetails, index) => (
+          <Projdetails ProjDetails={projectDetails} key={index} />
+        ))}
+      </OwlCarousel>
+    </div>
   );
 };
 export default Projs;
