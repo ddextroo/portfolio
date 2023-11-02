@@ -12,7 +12,7 @@ import { ReactComponent as MySVG9 } from "./skills/figma-svgrepo-com.svg";
 import { ReactComponent as MySVG10 } from "./skills/hack-the-box-svgrepo-com.svg";
 import { ReactComponent as MySVG11 } from "./skills/art-palette-svgrepo-com.svg";
 import { ReactComponent as MySVG12 } from "./skills/flutter-svgrepo-com.svg";
-import audio from "./skills/audio.mp3";
+import audio from "./skills/audio.wav";
 import vid from "./skills/vid.mp4";
 import Projs from "./components/projs";
   
@@ -308,10 +308,6 @@ function App() {
                     </button>
                   </a>
                 </div>
-                <audio className="w-full mt-5" controls>
-                  <source src={audio} type="audio/mp3" />
-                  Your browser does not support the audio tag.
-                </audio>
               </div>
               <div className="md:px-10 sm:px-10 lg:px-20 flex-row justify-center items-center">
                 {/* <Marquee
@@ -389,6 +385,10 @@ function App() {
                   knowledge even further and strive for excellence in my future
                   projects.
                 </h3>
+                <audio className="w-full mt-5" controls>
+                  <source src={audio} type="audio/wav" />
+                  Your browser does not support the audio tag.
+                </audio>
                 {/* <div className="text-md mx-auto md:text-lg text-center flex items-end justify-start xl:justify-start lg:justify-start">
                   <a href="https://github.com/ddextroo">
                     <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />

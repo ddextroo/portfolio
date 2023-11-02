@@ -15,8 +15,7 @@ const Projdetails = ({ ProjDetails }) => {
               {name}
             </p>
             <p className="text-md p-5 text-gray">{description}</p>
-            {/* Add more details or content to your modal as needed */}
-            <button
+             <button
               class="px-20 py-2 mb-5 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight"
               onClick={onClose}
             >
