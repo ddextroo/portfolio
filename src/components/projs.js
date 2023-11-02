@@ -21,6 +21,8 @@ import dyoutube from "../projects_img/dyoutube.png";
 import dyt from "../projects_img/dyt.png";
 import ictmod from "../projects_img/ictmod.png";
 import digipa from "../projects_img/digipa.png";
+import kemitoon from "../projects_img/kemitoon.png";
+import budyet from "../projects_img/budyet.png";
 
 import Projdetails from "./projdetails";
 
@@ -83,7 +85,7 @@ const Projs = () => {
       img: datm,
     },
     {
-      name: "DYoutube Downloader",
+      name: "DYoutube Downloader Desktop",
       description:
         "YouTube downloader written in C# with an API is a powerful tool that allows users to download videos from YouTube directly to their devices. It leverages the capabilities of the YouTube API to fetch video metadata and download the corresponding video files.",
       tech: ["Android", "C#", "API"],
@@ -181,6 +183,13 @@ const Projs = () => {
       img: dmusic,
     },
     {
+      name: "DYT",
+      description:
+        "Java Firebase Console Music Player is a feature-rich app that offers users a seamless music streaming and downloading experience. Developed in Java, the app integrates with Firebase, a popular cloud-based platform, to provide a robust backend infrastructure.",
+      tech: ["Android", "Java", "Firebase"],
+      img: dyt,
+    },
+    {
       name: "DCalculator",
       description:
         "The Simple Calculator with Clean UI is a user-friendly app that provides basic arithmetic functionality in a minimalist and intuitive interface. Designed for simplicity and ease of use, this calculator allows users to perform simple calculations quickly and efficiently.",
@@ -220,14 +229,14 @@ const Projs = () => {
       description:
         "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
       tech: ["Android", "Java", "Firebase"],
-      img: iskolar,
+      img: kemitoon,
     },
     {
-      name: "Cash Management System in Tisa",
+      name: "Budyet Ta Bai",
       description:
         "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
       tech: ["Android", "Java", "Firebase"],
-      img: iskolar,
+      img: budyet,
     },
   ];
 

@@ -8,7 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#52527d" />
   <!-- Primary Meta Tags -->
-  <title>My Portfolio</title>
+  <script type='text/javascript'> 
+    title = "Dexter G. Inguito | Portfolio;  ";
+    position = 0;
+    function scrolltitle() {
+        document.title = title.substring(position, title.length) + title.substring(0, position); 
+        position++;
+        if (position > title.length) position = 0;
+        titleScroll = window.setTimeout(scrolltitle,170);
+    }
+     
+    scrolltitle();
+     
+     
+     
+    </script>
   <meta name="title" content="Dexter G. Inguito - Cebu Technological University" />
   <meta name="description"
     content="A determined individual with aspirations of becoming an Android Developer and Software Developer, willing to overcome resource limitations in pursuit of knowledge." />

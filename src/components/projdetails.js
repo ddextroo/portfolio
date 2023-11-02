@@ -10,7 +10,7 @@ const Projdetails = ({ ProjDetails }) => {
   const Modal = ({ onClose }) => (
     <div className="modal-overlay justify-center items-center flex fixed inset-0 z-50 bg-black bg-opacity-50 rounded-xl h-full">
       <div className="modal justify-center items-center flex flex-col overflow-x-hidden overflow-y-auto relative w-auto my-6 mx-auto max-w-3xl h-full">
-          <div className="modal-content p-5 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 max-h-full h-full font-poppins overflow-scroll overflow-x-hidden">
+          <div className="modal-content p-5 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 max-h-full h-full font-poppins overflow-auto overflow-x-hidden">
             <p className="font-poppins text-2xl p-5 text-primaryLight">
               {name}
             </p>
