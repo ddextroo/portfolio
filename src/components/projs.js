@@ -27,13 +27,12 @@ import budyet from "../projects_img/budyet.png";
 import Projdetails from "./projdetails";
 
 import OwlCarousel from "react-owl-carousel";
-import React, { useState } from "react";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Projs = () => {
   const options = {
-    autoplayTimeout: 1500,
+    autoplayTimeout: 2500,
     autoplay: true,
     dots: false,
     nav: false,
@@ -173,7 +172,7 @@ const Projs = () => {
       description:
         "Moving Market is a mobile application designed to make shopping for vegetables and necessary items a convenient and hassle-free experience. With its innovative features, the app allows users to access a map that displays the available markets in their vicinity. Users can explore the map, identify nearby markets, and select the ones that suit their preferences. The app provides a platform for users to browse and purchase a variety of vegetables and other essential items directly from these markets.",
       tech: ["Android", "Java", "Firebase"],
-      img: beart,
+      img: movingmarket,
     },
     {
       name: "DMusic Player",
@@ -185,7 +184,7 @@ const Projs = () => {
     {
       name: "DYT",
       description:
-        "Java Firebase Console Music Player is a feature-rich app that offers users a seamless music streaming and downloading experience. Developed in Java, the app integrates with Firebase, a popular cloud-based platform, to provide a robust backend infrastructure.",
+        "DYT is a versatile application designed for converting YouTube links to both MP3 audio and MP4 video formats. In addition to its conversion capabilities, the app provides a user-friendly interface that allows you to browse, search for specific videos, and conveniently select content for download in just one click. This makes it a handy tool for users looking to easily extract audio or video content from YouTube for offline use.",
       tech: ["Android", "Java", "Firebase"],
       img: dyt,
     },
@@ -220,21 +219,21 @@ const Projs = () => {
     {
       name: "DIGIPA",
       description:
-        "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
+        "DIGIPA is more than just an app; it's your academic partner. With its cutting-edge automatic PDF scanner, you can now effortlessly scan your PDF grades and watch as your GPA is computed accurately in a matter of seconds. No more manual calculations, no more stress – just one click, and your GPA is at your fingertips.",
       tech: ["Android", "Java", "Firebase", "Python"],
       img: digipa,
     },
     {
       name: "Kemitoon",
       description:
-        "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
+        "KemiToon is a dynamic Android-based application, meticulously curated to bring the world of Chemistry to life through captivating comics. Designed with a clear educational focus, this app offers a unique approach to understanding high school-level Chemistry concepts.",
       tech: ["Android", "Java", "Firebase"],
       img: kemitoon,
     },
     {
       name: "Budyet Ta Bai",
       description:
-        "An application that hosts compiled, comprehensive, and concise reviewers for college entrance examinations. It features groupchats to keep students updated, It has video manuals and readable modules.",
+        "Budyet Ta Bai is your ultimate cash-monitoring mobile tool. With Budyet Ta Bai, you can effortlessly keep track of your finances on the go. Our powerful app is designed to give you complete control over your money",
       tech: ["Android", "Java", "Firebase"],
       img: budyet,
     },
