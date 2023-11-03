@@ -245,13 +245,13 @@ function App() {
               isSticky ? "" : ""
             }`}
           >
-            <h1 className="text-xl px-8 text-colorAccent font-darknet">
+            <h1 className="text-xl px-8 text-colorAccent font-bold">
               <a
                 href="#home"
                 onClick={handleMenuItemClick}
-                className="font-bold"
+                className=""
               >
-                &lt;/DDev&gt;
+                &lt;DDev\&gt;
               </a>
             </h1>
             <div className="md:hidden">
@@ -348,7 +348,7 @@ function App() {
           <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
             <div className="flex flex-col items-center text-sm">
               <div className="md:pr-4 lg:text-center" data-aos="fade-right">
-                <h2 className="text-4xl text-teal-400 font-poppins whitespace-nowrap md:text-4xl lg:text-5xl">
+                <h2 className="text-4xl text-teal-400 font-semibold whitespace-nowrap md:text-4xl lg:text-5xl">
                   Dexter G. Inguito
                 </h2>
                 <TypeAnimation
@@ -427,7 +427,7 @@ function App() {
                 className="md:basis-1/2 md:pr-4 lg:text-left"
                 data-aos="zoom-in-left"
               >
-                <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl">
+                <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl">
                   About
                 </h2>
                 <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-lg">
@@ -470,8 +470,8 @@ function App() {
         </section>
         {/* projects */}
         <section id="projects" className="p-10 min-h-fit">
-          <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-2">
-            PROJECTS
+          <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl py-2">
+            Projects
           </h2>
           <p className="font-poppins text-md text-gray">25 total of projects</p>
           <div className="p-10" data-aos="zoom-in-up">
@@ -504,7 +504,7 @@ function App() {
                   onSubmit={handleSubmit}
                 >
                   <div className="mb-5">
-                    <h2 className="text-4xl font-poppins text-colorAccent">
+                    <h2 className="text-4xl font-semibold text-colorAccent">
                       Contact me
                     </h2>
                   </div>
