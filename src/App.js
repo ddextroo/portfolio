@@ -15,14 +15,11 @@ import { ReactComponent as MySVG12 } from "./skills/flutter-svgrepo-com.svg";
 import audio from "./skills/audio.wav";
 import vid from "./skills/vid.mp4";
 import Projs from "./components/projs";
-  
+
 import { ReactComponent as MySVG13 } from "./arrow-up-s-fill.svg";
 import { ReactComponent as MySVG14 } from "./menu-3-line.svg";
 import { ReactComponent as MySVG15 } from "./close-line.svg";
-import {
-  Input,
-  Textarea,
-} from "@material-tailwind/react";
+import { Input, Textarea } from "@material-tailwind/react";
 
 import mainAvatar from "./about_img.jpg";
 
@@ -30,10 +27,11 @@ import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
 import DrifterStars from "@devil7softwares/react-drifter-stars";
 import { TypeAnimation } from "react-type-animation";
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Scrollspy from "react-scrollspy";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaBeer } from "react-icons/fa";
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -45,9 +43,11 @@ function App() {
   const [activeSection, setActiveSection] = useState();
   const [isSticky, setIsSticky] = useState(false);
   const [showScrollUpBtn, setShowScrollUpBtn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const videoRef = useRef(null);
 
+  const formRef = useRef(null);
 
   const items = [
     {
@@ -84,8 +84,48 @@ function App() {
     },
   ];
 
-  const handleSectionClick2 = (sectionId) => {
-    setActiveSection(sectionId);
+  const Modal = ({ onClose }) => (
+    <div className="modal-overlay justify-center items-center flex fixed inset-0 z-50 bg-black bg-opacity-50 rounded-xl">
+      <div className="modal justify-center items-center flex flex-col overflow-x-hidden overflow-y-auto relative w-auto my-6 mx-auto max-w-3xl">
+        <div className="modal-content p-5 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 max-h-full h-full font-poppins overflow-auto overflow-x-hidden ml-20 mr-20">
+          <div className="flex flex-row justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+            p-10
+          >
+            <path
+              d="M22 14H20V7.23792L12.0718 14.338L4 7.21594V19H14V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V14ZM4.51146 5L12.0619 11.662L19.501 5H4.51146ZM19 22L15.4645 18.4645L16.8787 17.0503L19 19.1716L22.5355 15.636L23.9497 17.0503L19 22Z"
+              fill="rgba(254,253,253,1)"
+            ></path>
+          </svg>
+          </div>
+          <p className="font-poppins text-2xl p-5 text-primaryLight">
+            Message successfully sent
+          </p>
+          <p className="text-md p-5 text-gray">
+            Thank you for reaching out to us! We value your feedback and are
+            here to assist you.
+          </p>
+          <button
+            class="px-20 py-2 mb-5 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight"
+            onClick={onClose}
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const toggleMenu = () => {
@@ -108,7 +148,7 @@ function App() {
   useEffect(() => {
     let options = {
       rootMargin: "0px",
-      threshold: [0.25, 0.75]
+      threshold: [0.25, 0.75],
     };
     let handlePlay = (entries, observer) => {
       entries.forEach((entry) => {
@@ -170,6 +210,20 @@ function App() {
     });
   };
 
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbxJ_-tyzfd1HAXEHh_wLt62AI-qgGjFrBuLftv-yVx0H0FKYYk3gvwFa_zvxUyyqUzR/exec";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch(scriptUrl, { method: "POST", body: new FormData(formRef.current) })
+      .then((res) => {
+        console.log("SUCCESSFULLY SUBMITTED");
+        openModal();
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <Router>
       <div className="App bg-primaryDark">
@@ -227,7 +281,9 @@ function App() {
                       : ""
                   }`}
                 >
-                  <a href="#home" onClick={handleMenuItemClick}>Home</a>
+                  <a href="#home" onClick={handleMenuItemClick}>
+                    Home
+                  </a>
                 </li>
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
@@ -235,9 +291,10 @@ function App() {
                       ? "bg-colorAccent p-2 rounded-md font-poppins"
                       : ""
                   }`}
-                  
                 >
-                  <a href="#about" onClick={handleMenuItemClick}>About</a>
+                  <a href="#about" onClick={handleMenuItemClick}>
+                    About
+                  </a>
                 </li>
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
@@ -245,9 +302,10 @@ function App() {
                       ? "bg-colorAccent p-2 rounded-md font-poppins"
                       : ""
                   }`}
-                  
                 >
-                  <a href="#projects" onClick={handleMenuItemClick}>Projects</a>
+                  <a href="#projects" onClick={handleMenuItemClick}>
+                    Projects
+                  </a>
                 </li>
               </Scrollspy>
 
@@ -280,10 +338,7 @@ function App() {
         <section className="home min-h-fit font-poppins" id="home">
           <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
             <div className="flex flex-col items-center text-sm">
-              <div
-                className="md:pr-4 lg:text-center"
-                data-aos="fade-right"
-              >
+              <div className="md:pr-4 lg:text-center" data-aos="fade-right">
                 <h2 className="text-4xl text-teal-400 font-poppins whitespace-nowrap md:text-4xl lg:text-5xl">
                   Dexter G. Inguito
                 </h2>
@@ -303,7 +358,7 @@ function App() {
                 />
                 <div className="text-md py-5 mx-auto md:text-lg">
                   <a href="#contact" className="contact">
-                   <button class="px-20 py-2 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
+                    <button class="px-20 py-2 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
                       Let's talk
                     </button>
                   </a>
@@ -330,14 +385,14 @@ function App() {
                   ))}
                 </div>
                 <video
-                    className="video__player w-full lg:max-w-5xl flex justify-center items-center rounded-lg"
-                    loop
-                    controls
-                    ref={videoRef}
-                  >
-                    <source src={vid} type="video/mp4" />
+                  className="video__player w-full lg:max-w-5xl flex justify-center items-center rounded-lg"
+                  loop
+                  controls
+                  ref={videoRef}
+                >
+                  <source src={vid} type="video/mp4" />
                   Your browser does not support the audio tag.
-                  </video>
+                </video>
                 <div
                   className="flex-row lg:w-2/3 items-center"
                   data-aos="fade-left"
@@ -409,10 +464,7 @@ function App() {
           <h2 className="font-poppins text-4xl text-colorAccent font-medium md:text-3xl py-10">
             PROJECTS
           </h2>
-          <div
-            className="p-10"
-            data-aos="zoom-in-up"
-          >
+          <div className="p-10" data-aos="zoom-in-up">
             <Projs></Projs>
           </div>
         </section>
@@ -434,38 +486,65 @@ function App() {
                 className="md:w-1/2 m-2 md:pr-4 lg:text-left font-poppins lg:mt-5"
                 data-aos="zoom-in-left"
               >
-                <form className="backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10">
-                <div className="mb-5">
-                  <h2 className="text-4xl font-poppins text-colorAccent">
-                    Contact me
-                  </h2>
-                </div>
-              
-                <div className="mb-5">
-                  <Input label="Name" color="teal" className="text-white" />
-                </div>
-                <div className="mb-5">
-                  <Input label="Email" color="teal" className="text-white" />
-                </div>
-                <div className="mb-5">
-                  <Textarea size="xl" color="teal" label="Message" className="text-white placeholder-white" />
-                </div>
-                <div className="mb-5 flex justify-end items-center">
-                  <a href="https://github.com/ddextroo">
-                    <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/dexter-inguito-b039a827b">
-                    <MySVG3 className="mr-2 w-8 h-8 hover:brightness-125" />
-                  </a>
-                  <button class="px-10 py-3 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight">
+                <form
+                  className="backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10"
+                  method="post"
+                  ref={formRef}
+                  name="google-sheet"
+                  onSubmit={handleSubmit}
+                >
+                  <div className="mb-5">
+                    <h2 className="text-4xl font-poppins text-colorAccent">
+                      Contact me
+                    </h2>
+                  </div>
+
+                  <div className="mb-5">
+                    <Input
+                      label="Name"
+                      color="teal"
+                      className="text-white"
+                      name="name"
+                    />
+                  </div>
+                  <div className="mb-5">
+                    <Input
+                      label="Email"
+                      color="teal"
+                      className="text-white"
+                      name="email"
+                    />
+                  </div>
+                  <div className="mb-5">
+                    <Textarea
+                      size="xl"
+                      color="teal"
+                      label="Message"
+                      className="text-white placeholder-white"
+                      name="message"
+                    />
+                  </div>
+                  <div className="mb-5 flex justify-end items-center">
+                    <a href="https://github.com/ddextroo">
+                      <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/dexter-inguito-b039a827b">
+                      <MySVG3 className="mr-2 w-8 h-8 hover:brightness-125" />
+                    </a>
+                    <button
+                      class="px-10 py-3 bg-colorAccentDark rounded-lg shadow-xl hover:bg-colorAccent transform hover:scale-105 hover:rotate-1 transition-all duration-250 focus:outline-none select-none font-medium text-primaryLight hover:text-primaryLight"
+                      name="submit"
+                      type="submit"
+                    >
                       Send Message
                     </button>
-                </div>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </section>
+        {showModal && <Modal onClose={closeModal} />}
       </div>
     </Router>
   );
