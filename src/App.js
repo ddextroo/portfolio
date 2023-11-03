@@ -31,7 +31,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Scrollspy from "react-scrollspy";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaBeer } from "react-icons/fa";
+import Confetti from "react-confetti";
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -84,23 +84,32 @@ function App() {
     },
   ];
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth);
+    setScreenHeight(window.innerHeight);
+  };
+
   const Modal = ({ onClose }) => (
     <div className="modal-overlay justify-center items-center flex fixed inset-0 z-50 bg-black bg-opacity-50 rounded-xl">
+      <Confetti width={screenWidth} height={screenHeight} />
       <div className="modal justify-center items-center flex flex-col overflow-x-hidden overflow-y-auto relative w-auto my-6 mx-auto max-w-3xl">
         <div className="modal-content p-5 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 max-h-full h-full font-poppins overflow-auto overflow-x-hidden ml-20 mr-20">
           <div className="flex flex-row justify-center items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="60"
-            height="60"
-            p-10 
-          >
-            <path
-              d="M22 14H20V7.23792L12.0718 14.338L4 7.21594V19H14V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V14ZM4.51146 5L12.0619 11.662L19.501 5H4.51146ZM19 22L15.4645 18.4645L16.8787 17.0503L19 19.1716L22.5355 15.636L23.9497 17.0503L19 22Z"
-              fill="rgba(254,253,253,1)"
-            ></path>
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="60"
+              height="60"
+              p-10
+            >
+              <path
+                d="M22 14H20V7.23792L12.0718 14.338L4 7.21594V19H14V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V14ZM4.51146 5L12.0619 11.662L19.501 5H4.51146ZM19 22L15.4645 18.4645L16.8787 17.0503L19 19.1716L22.5355 15.636L23.9497 17.0503L19 22Z"
+                fill="rgba(254,253,253,1)"
+              ></path>
+            </svg>
           </div>
           <p className="font-poppins text-2xl p-5 text-primaryLight">
             Message successfully sent
@@ -500,11 +509,11 @@ function App() {
                     </h2>
                   </div>
 
-                  <div className="mb-5">
+                  <div className="mb-5 font-poppins">
                     <Input
                       label="Name"
                       color="teal"
-                      className="text-white"
+                      className="text-white font-poppins"
                       name="name"
                     />
                   </div>
@@ -512,7 +521,7 @@ function App() {
                     <Input
                       label="Email"
                       color="teal"
-                      className="text-white"
+                      className="text-white font-poppins"
                       name="email"
                     />
                   </div>
@@ -521,7 +530,7 @@ function App() {
                       size="xl"
                       color="teal"
                       label="Message"
-                      className="text-white placeholder-white"
+                      className="text-white placeholder-white font-poppins"
                       name="message"
                     />
                   </div>

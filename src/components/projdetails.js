@@ -39,7 +39,7 @@ const Projdetails = ({ ProjDetails }) => {
     <div>
       <div class="item">
         <div
-          className="h-96 lg:w-96 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10 hover:bg-colorAccent/30 cursor-pointer"
+          className="h-96 lg:w-96 backdrop-filter backdrop-blur-lg rounded-xl border-white/30 border bg-primaryDarkLight/30 p-10 hover:bg-colorAccent/30 cursor-pointer "
           onClick={() => openModal(ProjDetails)}
         >
           <div className="max-w-screen-md flex flex-col justify-between">
