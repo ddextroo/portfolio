@@ -32,6 +32,7 @@ import Scrollspy from "react-scrollspy";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Confetti from "react-confetti";
+import ExperienceItem from "./components/experience";
 
 function App() {
   // https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/pages/index.js
@@ -44,6 +45,7 @@ function App() {
   const [isSticky, setIsSticky] = useState(false);
   const [showScrollUpBtn, setShowScrollUpBtn] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   const videoRef = useRef(null);
 
@@ -245,11 +247,11 @@ function App() {
               isSticky ? "" : ""
             }`}
           >
-            <h1 className="text-xl px-8 text-colorAccent font-bold">
+            <h1 className="text-xl px-8 text-colorAccent font-poppins">
               <a
                 href="#home"
                 onClick={handleMenuItemClick}
-                className=""
+                className="font-bold"
               >
                 &lt;DDev\&gt;
               </a>
@@ -280,7 +282,7 @@ function App() {
                     ? "fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primaryDark text-center"
                     : "hidden"
                 } scrollspy md:flex md:flex-row md:items-center`}
-                items={["home", "about", "projects", "contact"]}
+                items={["home", "about", "experience", "projects", "contact"]}
                 currentClassName="isCurrent"
               >
                 <li
@@ -307,6 +309,17 @@ function App() {
                 </li>
                 <li
                   className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
+                    activeSection === "experience"
+                      ? "bg-colorAccent p-2 rounded-md font-poppins"
+                      : ""
+                  }`}
+                >
+                  <a href="#experience" onClick={handleMenuItemClick}>
+                    Experience
+                  </a>
+                </li>
+                <li
+                  className={`transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-colorAccent p-2 rounded-md duration-200 mr-5 text-primaryLight text-lg scroll-smooth hover:scroll-auto ${
                     activeSection === "projects"
                       ? "bg-colorAccent p-2 rounded-md font-poppins"
                       : ""
@@ -316,18 +329,17 @@ function App() {
                     Projects
                   </a>
                 </li>
+                {isMenuOpen && (
+                  <li className="absolute top-0 right-0 mt-2 mr-4">
+                    <button
+                      className="text-primaryLight hover:text-colorAccent focus:outline-none p-10"
+                      onClick={toggleMenu}
+                    >
+                      <MySVG15 className="w-5 h-5 hover: brightness-125" />
+                    </button>
+                  </li>
+                )}
               </Scrollspy>
-
-              {isMenuOpen && (
-                <li className="absolute top-0 right-0 mt-2 mr-4">
-                  <button
-                    className="text-primaryLight hover:text-colorAccent focus:outline-none p-10"
-                    onClick={toggleMenu}
-                  >
-                    <MySVG15 className="w-5 h-5 hover: brightness-125" />
-                  </button>
-                </li>
-              )}
             </ul>
           </nav>
           {showScrollUpBtn && (
@@ -413,7 +425,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="about min-h-fit" id="about">
+        <section className="about min-h-fit font-poppins" id="about">
           <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
             <div className="flex flex-col lg:flex-row items-center text-sm">
               <div class="p-10 md:w-1/2 md:pl-4" data-aos="zoom-in">
@@ -430,7 +442,7 @@ function App() {
                 <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl">
                   About
                 </h2>
-                <h3 className="font-poppins text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-lg">
+                <h3 className="text-justify py-5 text-gray dark:text-gray-200 mx-auto md:text-lg">
                   I'm Dexter G. Inguito, a self-taught developer passionate
                   about coding and creativity. My goal is to become a senior
                   developer, constantly pushing my limits to find innovative
@@ -468,6 +480,45 @@ function App() {
             </div>
           </div>
         </section>
+        <section
+          id="experience"
+          className="experience p-10 min-h-fit font-poppins"
+        >
+          <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl py-2">
+            Experience
+          </h2>
+          <p className="font-poppins text-md text-gray">
+            My experience in tech
+          </p>
+          <div className="max-w-xl mx-auto">
+            <ExperienceItem
+              year="2023-2024"
+              title="Google Developer Student Club"
+              description="Mobile Development Lead"
+            />
+            <ExperienceItem
+              year="2021-Present"
+              title="Ultima Reviewer"
+              description="Full Stack Mobile Developer for the app 'Iskolar ng Bayan'."
+            />
+            <ExperienceItem
+              year="2020-Present"
+              title="Freelancer"
+              description="Freelancing on mobile, and software apps."
+            />
+            <ExperienceItem
+              year="2020"
+              title="Unirises"
+              description="As Project Lead and MVP developer"
+            />
+            <ExperienceItem
+              year="2018-2020"
+              title="Security Researcher"
+              description="Self taught cybersecurity stuff"
+            />
+            {/* Add more ExperienceItem components for additional experiences */}
+          </div>
+        </section>
         {/* projects */}
         <section id="projects" className="p-10 min-h-fit">
           <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl py-2">
@@ -478,7 +529,7 @@ function App() {
             <Projs></Projs>
           </div>
         </section>
-        <section className="contact min-h-fit" id="contact">
+        <section className="contact min-h-fit font-poppins" id="contact">
           <div className={`p-10 ${isMenuOpen ? "hidden" : ""}`}>
             <div className="flex flex-col lg:flex-row justify-center items-center text-sm">
               <div class="m-5 md:basis-1/2 rounded-md" data-aos="zoom-in">
@@ -536,7 +587,7 @@ function App() {
                   </div>
                   <div className="mb-5 flex justify-end items-center">
                     <a href="https://github.com/ddextroo">
-                      <MySVG2 className="mr-2 w-8 h-8 hover:brightness-125" />
+                      <MySVG2 className="mr-1 w-8 h-8 hover:brightness-125" />
                     </a>
                     <a href="https://www.linkedin.com/in/dexter-inguito-b039a827b">
                       <MySVG3 className="mr-2 w-8 h-8 hover:brightness-125" />
@@ -554,6 +605,9 @@ function App() {
             </div>
           </div>
         </section>
+        <footer className="backdrop-filter backdrop-blur-lg rounded-t-xl border-white/30 border bg-primaryDarkLight/30 text-gray py-4 text-center font-poppins">
+          <p>Copyright &copy; 2019 - {currentYear} DDev | All Rights Reserved.</p>
+        </footer>
         {showModal && <Modal onClose={closeModal} />}
       </div>
     </Router>
