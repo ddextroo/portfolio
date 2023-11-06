@@ -23,6 +23,7 @@ import ictmod from "../projects_img/ictmod.png";
 import digipa from "../projects_img/digipa.png";
 import kemitoon from "../projects_img/kemitoon.png";
 import budyet from "../projects_img/budyet.png";
+import chat from "../projects_img/chat.png";
 
 import Projdetails from "./projdetails";
 
@@ -236,6 +237,13 @@ const Projs = () => {
         "Budyet Ta Bai is your ultimate cash-monitoring mobile tool. With Budyet Ta Bai, you can effortlessly keep track of your finances on the go. Our powerful app is designed to give you complete control over your money",
       tech: ["Android", "Java", "Firebase"],
       img: budyet,
+    },
+    {
+      name: "Chat app software based",
+      description:
+        "Chat App is a Java Swing-based messaging application that stands out for its passwordless login and end-to-end encryption. Users can have secure one-on-one conversations without needing a traditional username and password. The app keeps messages private and offers a straightforward, user-friendly interface for hassle-free, confidential communication.",
+      tech: ["Java Swing", "Firebase"],
+      img: chat,
     },
   ];
 
