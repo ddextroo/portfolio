@@ -6,7 +6,7 @@ module.exports = withMT({
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        darknet: ["Darknet", "sans-serif"],
+        anurati: ["Anurati", "sans-serif"],
       },
       colors: {
         primaryDark: "#363653",

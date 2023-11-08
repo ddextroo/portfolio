@@ -252,9 +252,9 @@ function App() {
               <a
                 href="#home"
                 onClick={handleMenuItemClick}
-                className="font-bold"
+                className="font-anurati"
               >
-                &lt;DDev\&gt;
+                DEXTRO
               </a>
             </h1>
             <div className="md:hidden">
