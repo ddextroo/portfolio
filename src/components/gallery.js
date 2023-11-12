@@ -1,11 +1,11 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const Gallery = ( {path} ) => {
+const Gallery = ( {path, className} ) => {
   return (
     <LazyLoadImage
       src={path}
-      className="w-fit h-44 rounded-lg mx-5"
+      className={className}
     />
   );
 };
