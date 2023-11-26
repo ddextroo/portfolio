@@ -555,7 +555,7 @@ function App() {
           <h2 className=" text-4xl text-colorAccent font-bold md:text-3xl py-2">
             Projects
           </h2>
-          <p className="font-poppins text-md text-gray">26 total of projects</p>
+          <p className="font-poppins text-md text-gray">28 total of projects</p>
           <div className="p-10" data-aos="zoom-in-up">
             <Projs></Projs>
           </div>
